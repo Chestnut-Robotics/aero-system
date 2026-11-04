@@ -3,82 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aero Hand & Aero UMI — Chestnut Robotics</title>
-  <meta name="description" content="Aero Hand and Aero UMI: a robotic hand and wearable demonstration interface co-designed for dexterous manipulation. Explore the system and watch the product film.">
+  <title>Aero Hand &amp; Aero UMI — Dexterity in Motion and Contact</title>
+  <meta name="description" content="Aero Hand and Aero UMI connect human demonstrations with robotic execution. Explore the co-designed platform through tactile sensing, teleoperation, and dexterous manipulation demos.">
   <link rel="canonical" href="https://chestnut-robotics.github.io/aero-system/">
   <link rel="icon" href="https://chestnut.bot/logo-favicon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Aero Hand & Aero UMI">
-  <meta property="og:description" content="Co-designed for Dexterous Manipulation · Chestnut Robotics">
+  <meta property="og:title" content="Aero Hand &amp; Aero UMI — Dexterity in Motion and Contact">
+  <meta property="og:description" content="Capture and execution, designed together. See motion and touch in action with Chestnut Robotics.">
   <meta property="og:url" content="https://chestnut-robotics.github.io/aero-system/">
-  <meta property="og:image" content="https://chestnut.bot/assets/aero-launch-poster.jpg">
+  <meta property="og:image" content="https://chestnut-robotics.github.io/aero-system/assets/media/card-tactile.jpg">
+  <meta property="og:image:alt" content="Aero Hand and Aero UMI holding cards, with tactile signals visualized below">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#ffffff">
-  <style>
-    :root{--ink:#20292e;--muted:#607078;--accent:#167c7b;--line:#e3e9e8;--wash:#f5f8f7}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;color:var(--ink);background:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.7}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,summary:focus-visible{outline:3px solid #b77739;outline-offset:5px}.skip{position:absolute;top:-70px;left:20px;background:#fff;padding:12px;z-index:3}.skip:focus{top:10px}.top{max-width:1160px;margin:auto;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{color:#243d41;font-size:14px;font-weight:650;letter-spacing:.035em}.top nav{display:flex;gap:25px;font-size:13px}.top nav a{color:var(--muted)}main{max-width:1060px;margin:auto;padding:0 30px}.hero{text-align:center;padding:65px 0 36px}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:650;color:var(--accent);margin:0 0 16px}h1{font-size:clamp(34px,5.6vw,62px);line-height:1.13;letter-spacing:-.048em;font-weight:650;margin:0 0 15px}.subtitle{font-size:clamp(21px,3vw,29px);line-height:1.4;font-weight:400;margin:0 0 18px;letter-spacing:-.02em}.affiliation{font-size:16px;margin:0;color:var(--muted)}.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:27px 0 22px}.button{display:inline-flex;align-items:center;gap:8px;border:1px solid #d9e2e0;border-radius:7px;padding:9px 19px;color:var(--ink);font-size:14px;font-weight:550;transition:background .15s}.button:hover{text-decoration:none;background:#edf3f1}.button.primary{background:var(--ink);border-color:var(--ink);color:white}.button.primary:hover{background:#31484d}.preview-note{color:#7a858a;font-size:12px;margin:0}.film{margin:4px 0 0;scroll-margin-top:28px}.film video{display:block;width:100%;aspect-ratio:16/9;background:#101b1d;border-radius:9px;box-shadow:0 14px 40px #182e3610}.film figcaption{text-align:center;font-size:13px;color:var(--muted);margin:15px auto 0;max-width:700px}.film figcaption b{font-weight:600;color:#354d53}.abstract{max-width:800px;margin:64px auto 66px}h2{font-size:28px;line-height:1.25;letter-spacing:-.025em;font-weight:600;margin:0 0 20px}.abstract h2{text-align:center}.abstract p{font-size:17px;line-height:1.9;margin:0;color:#485960}.section-head{border-top:1px solid var(--line);padding-top:35px;display:flex;align-items:baseline;justify-content:space-between;gap:20px}.section-head p{margin:0;color:var(--muted);font-size:14px}.products{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:10px}.product{margin:0}.product img{display:block;width:100%;aspect-ratio:1332/916;object-fit:cover;border-radius:8px;background:var(--wash)}.role{font-size:11px;color:var(--accent);font-weight:650;letter-spacing:.12em;text-transform:uppercase;margin:23px 0 6px}.product h3{font-size:26px;letter-spacing:-.03em;line-height:1.3;margin:0 0 10px}.product p{font-size:15px;color:#53666d;margin:0 0 15px}.product .detail{font-size:14px;font-weight:550}.workflow{margin:64px 0;background:var(--wash);border:1px solid #e8efec;border-radius:9px;padding:32px 35px}.workflow h2{font-size:24px;margin-bottom:25px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.step .num{font-family:Georgia,serif;font-size:28px;color:#8ea8a2}.step h3{font-size:16px;margin:7px 0}.step p{font-size:14px;color:var(--muted);margin:0}.resources{text-align:center;max-width:740px;margin:0 auto 65px}.resources p{color:var(--muted);font-size:15px}.resources .actions{margin-top:22px}.foot{border-top:1px solid var(--line);max-width:1160px;padding:25px 30px 35px;margin:auto;display:flex;justify-content:space-between;gap:25px;color:#77868b;font-size:12px}.foot a{color:#596e75}.foot .links{display:flex;gap:22px}
-    @media(max-width:680px){.top{padding:20px}.top nav{gap:16px}.top nav .desktop{display:none}main{padding:0 20px}.hero{padding-top:43px}.subtitle{max-width:340px;margin-left:auto;margin-right:auto}.actions{gap:8px}.button{font-size:13px;padding:8px 13px}.abstract{margin:43px auto}.abstract p{font-size:16px;line-height:1.8}h2{font-size:25px}.section-head{display:block}.section-head p{margin:-7px 0 22px}.products{grid-template-columns:1fr;gap:32px}.role{margin-top:17px}.workflow{padding:26px 23px;margin:43px 0}.steps{grid-template-columns:1fr;gap:23px}.step{display:grid;grid-template-columns:30px 1fr;column-gap:15px}.step .num{grid-row:1/3}.step h3{margin:0 0 5px}.step p{grid-column:2}.resources{margin-bottom:45px}.foot{padding:22px 20px;display:block}.foot .links{margin-top:12px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  </style>
+  <meta name="theme-color" content="#f8f9f6">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#overview">Skip to overview</a>
-  <header class="top">
-    <a class="brand" href="https://chestnut.bot/">CHESTNUT ROBOTICS</a>
-    <nav aria-label="Main navigation"><a href="#overview" class="desktop">Overview</a><a href="#system">The system</a><a href="https://chestnut.bot/aero-system.html">Product details ↗</a></nav>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://chestnut.bot/" aria-label="Chestnut Robotics home">CHESTNUT<span>ROBOTICS</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#system">System</a><a href="#demonstrations">Demonstrations</a><a href="#data">Data workflow</a><a href="#resources">Resources</a>
+      </nav>
+      <a class="header-contact" href="https://chestnut.bot/contact.html?type=business">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
-  <main>
-    <section class="hero" aria-labelledby="title">
-      <p class="eyebrow">A paired platform for motion and contact</p>
-      <h1 id="title">Aero Hand &amp; Aero UMI</h1>
-      <p class="subtitle">Co-designed for Dexterous Manipulation</p>
-      <p class="affiliation"><a href="https://chestnut.bot/">Chestnut Robotics</a></p>
-      <div class="actions"><a class="button primary" href="#film">▶ &nbsp; Watch video</a><a class="button" href="#system">Explore the system</a><a class="button" href="https://chestnut.bot/contact.html?type=business">Get in touch ↗</a></div>
-      <p class="preview-note">Project preview · More demonstrations and technical resources coming soon.</p>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="title">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> A platform for dexterous manipulation</p>
+      <h1 id="title">Aero Hand <span class="amp">&amp;</span> Aero UMI</h1>
+      <p class="hero-subtitle">Capture and execution,<br class="mobile-break"> <span>designed together.</span></p>
+      <p class="hero-description">Capture how a hand moves and touches.<br>Build demonstrations with robotic execution in mind.</p>
+      <div class="actions">
+        <a class="button primary" href="#contact-demo" data-play="contact-video"><span class="play-icon" aria-hidden="true">▶</span> Watch the demo</a>
+        <a class="button" href="#system">Explore the system <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="hero-demo" id="contact-demo">
+        <div class="demo-topline"><span>Dexterity is in the contact.</span><span class="media-meta">Physical demonstration · 13 s</span></div>
+        <video id="contact-video" controls playsinline muted preload="none" poster="assets/media/card-tactile.jpg" aria-label="Card interaction with Aero Hand, Aero UMI and tactile visualization" aria-describedby="contact-caption">
+          <source src="assets/media/card-tactile.mp4" type="video/mp4">
+          <a href="assets/media/card-tactile.mp4">Download the card demonstration.</a>
+        </video>
+        <figcaption id="contact-caption"><span><strong>Motion meets touch.</strong> A card interaction with Aero Hand (left) and Aero UMI (right), alongside tactile visualization.</span><span class="caption-note">Continuous excerpt · Normal speed · Silent</span></figcaption>
+      </figure>
     </section>
-    <figure class="film" id="film">
-      <video controls playsinline preload="none" poster="https://chestnut.bot/assets/aero-launch-poster.jpg" aria-label="Aero System product introduction film">
-        <source src="https://chestnut.bot/assets/aero-launch-720.mp4" type="video/mp4" media="(max-width: 768px)">
-        <source src="https://chestnut.bot/assets/aero-launch-1080.mp4" type="video/mp4">
-        Your browser does not support this video. <a href="https://chestnut.bot/aero-system.html">Watch the introduction on our product page.</a>
-      </video>
-      <figcaption><b>Human dexterity, mirrored.</b> Meet Aero Hand and Aero UMI in our product introduction film, featuring real footage and concept visualizations.</figcaption>
-    </figure>
-    <section class="abstract" id="overview" aria-labelledby="overview-title">
-      <h2 id="overview-title">Overview</h2>
-      <p>Dexterous manipulation depends on both motion and contact. We co-design <strong>Aero UMI</strong>, a wearable demonstration interface, and <strong>Aero Hand</strong>, a dexterous robotic hand, to connect human demonstrations with robotic execution. Aero UMI captures joint motion and tactile observations and provides an interface for teleoperation. Aero Hand supplies the corresponding robotic execution platform. Matched kinematics and calibrated joint correspondence bring the two devices into a shared workflow for researchers exploring contact-rich manipulation and learning from human demonstrations.</p>
+
+    <section class="overview wrap" aria-labelledby="overview-title">
+      <div><p class="eyebrow">The idea</p><h2 id="overview-title">A demonstration is more <br>than a sequence of poses.</h2></div>
+      <div class="overview-copy"><p>Picking up a thin object, holding a cup, or pinching a card depends on where contact happens and how it changes. Motion and touch belong together.</p><p>We co-design a wearable demonstration interface and a dexterous robotic hand around corresponding joint motion and contact surfaces. Aero UMI captures the interaction; Aero Hand provides the execution platform. Calibration connects the two in a shared workflow for learning from human demonstrations.</p></div>
     </section>
-    <section id="system" aria-labelledby="system-title">
-      <div class="section-head"><h2 id="system-title">One design, two roles.</h2><p>Demonstration capture ↔ Robotic execution</p></div>
-      <div class="products">
-        <article class="product">
-          <img src="https://chestnut.bot/assets/products/card-aero-umi.webp" width="1332" height="916" alt="Aero UMI wearable demonstration interface" loading="lazy">
-          <div class="role">01 / Capture</div><h3>Aero UMI</h3>
-          <p>A wearable interface for recording human demonstrations and teleoperating robots. Joint sensing and tactile observations capture how a person moves and interacts with objects.</p>
-          <a class="detail" href="https://chestnut.bot/aero-umi.html">Explore Aero UMI →</a>
-        </article>
-        <article class="product">
-          <img src="https://chestnut.bot/assets/products/card-aero-hand.webp" width="1332" height="916" alt="Aero Hand dexterous robotic hand mounted on a robot arm" loading="lazy">
-          <div class="role">02 / Execute</div><h3>Aero Hand</h3>
-          <p>A five-finger robotic hand with 15 active degrees of freedom and tactile sensing. Designed alongside Aero UMI, it provides the robot-side interface for dexterous manipulation research.</p>
-          <a class="detail" href="https://chestnut.bot/aero-hand.html">Explore Aero Hand →</a>
-        </article>
+
+    <section class="system-section" id="system" aria-labelledby="system-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">01 / The system</p><h2 id="system-title">One design. Two complementary roles.</h2></div><p>Start with the demonstration.<br>Design for the robot that will execute it.</p></div>
+        <div class="products">
+          <article class="product">
+            <div class="product-image"><img src="assets/media/card-aero-umi.webp" width="1332" height="916" alt="Aero UMI wearable demonstration interface" loading="lazy" decoding="async"></div>
+            <div class="product-copy"><p class="eyebrow">Capture human demonstrations</p><h3>Aero UMI</h3><p>A wearable interface that records finger motion and tactile observations during interaction, and provides an interface for teleoperation.</p><ul class="features"><li>Joint motion</li><li>Tactile observations</li><li>Wearable capture</li></ul><a class="text-link" href="https://chestnut.bot/aero-umi.html">Explore Aero UMI <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="product">
+            <div class="product-image"><img src="assets/media/card-aero-hand.webp" width="1332" height="916" alt="Aero Hand five-finger robotic hand on a robot arm" loading="lazy" decoding="async"></div>
+            <div class="product-copy"><p class="eyebrow">Execute robot actions</p><h3>Aero Hand</h3><p>A five-finger robotic hand with 15 active degrees of freedom and tactile sensing, designed alongside Aero UMI for dexterous manipulation.</p><ul class="features"><li>15 active DoF</li><li>Tactile sensing</li><li>Robot execution</li></ul><a class="text-link" href="https://chestnut.bot/aero-hand.html">Explore Aero Hand <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <div class="correspondence" aria-label="Three aspects of the shared design">
+          <div><span class="index">01</span><h3>Corresponding motion</h3><p>Capture actions in coordinates matched to the target hand.</p></div>
+          <div><span class="index">02</span><h3>Contact by design</h3><p>Consider fingertip contact surfaces on both sides of the interaction.</p></div>
+          <div><span class="index">03</span><h3>Calibrated together</h3><p>Use joint and camera calibration to connect the physical devices and their observations.</p></div>
+        </div>
       </div>
     </section>
-    <section class="workflow" aria-labelledby="workflow-title">
-      <h2 id="workflow-title">Connecting demonstrations and execution</h2>
-      <div class="steps">
-        <div class="step"><span class="num">1</span><h3>Capture motion and contact</h3><p>Record human interaction through a wearable interface designed around manipulation tasks.</p></div>
-        <div class="step"><span class="num">2</span><h3>Establish correspondence</h3><p>Connect the two devices through matched kinematics and calibrated joint mappings.</p></div>
-        <div class="step"><span class="num">3</span><h3>Explore robot manipulation</h3><p>Use the paired platform to study teleoperation, demonstrations, and contact-rich execution.</p></div>
+
+    <section class="demonstrations wrap section-space" id="demonstrations" aria-labelledby="demos-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / In the real world</p><h2 id="demos-title">Small interactions.<br>Rich manipulation.</h2></div><p>See the pair in action,<br>from a whole-hand grasp to a thin edge.</p></div>
+      <div class="demo-grid">
+        <figure class="task-demo"><video controls playsinline muted preload="none" poster="assets/media/cup-teleoperation.jpg" aria-label="Cup grasp teleoperation demonstration" aria-describedby="cup-caption"><source src="assets/media/cup-teleoperation.mp4" type="video/mp4"><a href="assets/media/cup-teleoperation.mp4">Download the cup demonstration.</a></video><figcaption id="cup-caption"><div class="caption-heading"><h3>A grasp, carried across.</h3><span class="tag">Teleoperation</span></div><p>Aero UMI guides Aero Hand through a cup grasp. Both devices are visible in one scene.</p><span class="caption-note">10-second continuous excerpt · Normal speed · Silent</span></figcaption></figure>
+        <figure class="task-demo"><video controls playsinline muted preload="none" poster="assets/media/thin-object.jpg" aria-label="Thin-object pickup on the wearable and robot sides, filmed separately" aria-describedby="blade-caption"><source src="assets/media/thin-object.mp4" type="video/mp4"><a href="assets/media/thin-object.mp4">Download the thin-object demonstration.</a></video><figcaption id="blade-caption"><div class="caption-heading"><h3>Find the edge. Make contact.</h3><span class="tag">Task demonstration</span></div><p>Picking up a utility blade from a flat surface makes the role of fingertip contact visible.</p><span class="caption-note">Separate takes, shown side by side · Normal speed · Silent</span></figcaption></figure>
       </div>
     </section>
-    <section class="resources" aria-labelledby="resources-title">
-      <h2 id="resources-title">Build with us.</h2>
-      <p>We are preparing additional demonstrations and technical resources for this project. Explore the current product information or get in touch about your research and applications.</p>
-      <div class="actions"><a class="button primary" href="https://chestnut.bot/aero-system.html">Product information ↗</a><a class="button" href="https://chestnut.bot/contact.html?type=business">Research &amp; application enquiries ↗</a></div>
+
+    <section class="data-section" id="data" aria-labelledby="data-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">03 / From interaction to data</p><h2 id="data-title">Keep the action.<br>Prepare the observation.</h2></div><p>A workflow for bringing recorded<br>demonstrations into robot learning.</p></div>
+        <ol class="data-steps"><li><span class="index">01 / Record</span><h3>Motion, touch &amp; vision</h3><p>Collect the interaction through the wearable and its observation setup.</p></li><li><span class="index">02 / Align</span><h3>Connect the coordinates</h3><p>Calibrate joints and cameras, then align the hand representation with the recorded scene.</p></li><li><span class="index">03 / Prepare</span><h3>Build the learning input</h3><p>Segment the scene, overlay the robot, reconstruct the observation, and curate the result.</p></li></ol>
+        <figure class="data-figure"><div class="data-images"><div><img src="assets/media/data-input.jpg" width="720" height="406" alt="Recorded demonstration used as a data-processing example" loading="lazy" decoding="async"><span>Recorded input</span></div><div><img src="assets/media/data-overlay.jpg" width="720" height="388" alt="Robot representation overlaid on a demonstration scene" loading="lazy" decoding="async"><span>Robot overlay</span></div><div><img src="assets/media/data-output.jpg" width="720" height="406" alt="Reconstructed observation illustrating the processing output" loading="lazy" decoding="async"><span>Reconstructed output</span></div></div><figcaption>Illustrative examples from the processing workflow. These images show individual stages, rather than a synchronized before-and-after sequence.</figcaption></figure>
+      </div>
     </section>
+
+    <section class="resources wrap section-space" id="resources" aria-labelledby="resources-title">
+      <div class="section-heading"><div><p class="eyebrow">04 / Explore further</p><h2 id="resources-title">A closer look at Aero.</h2></div><p>Product information, the introduction film,<br>and a conversation about your research.</p></div>
+      <div class="resource-links"><a href="https://chestnut.bot/aero-system.html"><span class="index">The paired platform</span><h3>Aero System <span aria-hidden="true">↗</span></h3><p>Explore product information and configurations.</p></a><a href="https://chestnut.bot/contact.html?type=business"><span class="index">Research &amp; applications</span><h3>Work with us <span aria-hidden="true">↗</span></h3><p>Discuss your demonstration and manipulation tasks.</p></a></div>
+      <details class="film-details" id="film"><summary><span><span class="play-icon" aria-hidden="true">▶</span> Watch the product introduction film</span><span class="details-label">3 min 39 s <span class="expand-icon" aria-hidden="true">+</span></span></summary><figure><video controls playsinline preload="none" poster="https://chestnut.bot/assets/aero-launch-poster.jpg" aria-label="Aero System product introduction film"><source src="https://chestnut.bot/assets/aero-launch-720.mp4" type="video/mp4" media="(max-width: 768px)"><source src="https://chestnut.bot/assets/aero-launch-1080.mp4" type="video/mp4"><a href="https://chestnut.bot/aero-system.html">Watch the film on the product page.</a></video><figcaption>The product introduction combines interviews, physical footage, and concept visualizations.</figcaption></figure></details>
+    </section>
+    <section class="closing"><div class="wrap"><p class="eyebrow">Human dexterity, mirrored.</p><h2>What will you teach <br>your robot next?</h2><a class="button light" href="https://chestnut.bot/contact.html?type=business">Let's talk about your research <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="foot"><span>© 2026 Chestnut Robotics · Project preview</span><div class="links"><a href="https://chestnut.bot/">Company</a><a href="https://github.com/Chestnut-Robotics/aero-system">Page source</a></div></footer>
+  <footer class="wrap"><span>© 2026 Chestnut Robotics</span><div><a href="https://chestnut.bot/">Company <span aria-hidden="true">↗</span></a><a href="https://github.com/Chestnut-Robotics/aero-system">Page source <span aria-hidden="true">↗</span></a><a href="#main">Back to top ↑</a></div></footer>
 </body>
 </html>

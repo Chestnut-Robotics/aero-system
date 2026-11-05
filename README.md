@@ -14,7 +14,7 @@ Run `python3 -m http.server 8765 --bind 127.0.0.1` and open http://127.0.0.1:876
 
 The three short demonstrations are silent H.264 MP4s with fast-start metadata, local posters, native controls, and `preload="none"`. Playback starts on visitor action. The small enhancement script pauses other players, offscreen videos, hidden-tab videos, and the introduction film when its disclosure closes. It never automatically resumes playback. Reduced-motion preferences disable smooth scrolling.
 
-The introduction film remains hosted on chestnut.bot and is presented separately from physical demonstrations. Each task caption describes what the footage shows; separate takes and illustrative processing examples are labeled accordingly.
+The introduction film remains hosted on chestnut.bot and is presented separately from physical demonstrations. Each task caption describes what the footage shows; separate takes are labeled accordingly.
 
 ## Publishing
 

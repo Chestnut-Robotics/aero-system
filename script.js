@@ -49,3 +49,49 @@ if ('IntersectionObserver' in window) {
   window.addEventListener('resize', updateNavigation);
   updateNavigation();
 }
+
+// Demonstration carousel. Without JS the track still scrolls and thumbnails link to each slide.
+for (const carousel of document.querySelectorAll('[data-carousel]')) {
+  const track = carousel.querySelector('.carousel-track');
+  const slides = [...track.children];
+  const thumbs = [...carousel.querySelectorAll('[data-slide]')];
+  const [prev, next] = carousel.querySelectorAll('.carousel-arrow');
+  const counter = carousel.querySelector('[data-current]');
+  let current = 0;
+  const show = index => {
+    current = Math.max(0, Math.min(slides.length - 1, index));
+    counter.textContent = current + 1;
+    prev.disabled = current === 0;
+    next.disabled = current === slides.length - 1;
+    thumbs.forEach((thumb, i) => thumb.setAttribute('aria-current', i === current ? 'true' : 'false'));
+    slides.forEach((slide, i) => { if (i !== current) slide.querySelector('video').pause(); });
+    const strip = carousel.querySelector('.carousel-thumbs');
+    if (strip.scrollWidth > strip.clientWidth) {
+      strip.scrollTo({ left: thumbs[current].parentElement.offsetLeft - strip.offsetLeft - 18, behavior: 'smooth' });
+    }
+  };
+  let settling = null;
+  const goTo = index => {
+    show(index);
+    clearTimeout(settling);
+    settling = setTimeout(() => { settling = null; }, 700);
+    track.scrollTo({ left: slides[current].offsetLeft - track.offsetLeft });
+  };
+  prev.addEventListener('click', () => goTo(current - 1));
+  next.addEventListener('click', () => goTo(current + 1));
+  thumbs.forEach((thumb, i) => thumb.addEventListener('click', event => { event.preventDefault(); goTo(i); }));
+  track.addEventListener('keydown', event => {
+    const step = { ArrowLeft: -1, ArrowRight: 1 }[event.key];
+    if (step && event.target === track) { event.preventDefault(); goTo(current + step); }
+  });
+  let pending = false;
+  track.addEventListener('scroll', () => {
+    if (pending || settling) return;
+    pending = true;
+    requestAnimationFrame(() => {
+      show(Math.round(track.scrollLeft / track.clientWidth));
+      pending = false;
+    });
+  }, { passive: true });
+  show(0);
+}

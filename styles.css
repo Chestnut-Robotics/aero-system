@@ -126,3 +126,34 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding-block
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+/* Demonstration carousel: swipe or scroll natively; buttons and thumbnails jump between slides. */
+.demo-carousel { position: relative; }
+.carousel-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; gap: 0; }
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.slide { flex: 0 0 100%; scroll-snap-align: start; padding-inline: 1px; }
+.slide h3 { margin-bottom: 14px; text-align: left; padding-right: 150px; min-height: 40px; display: flex; align-items: center; }
+.slide-num { color: var(--accent); font-size: 12px; font-weight: 500; margin-right: 8px; flex: none; }
+.carousel-bar { position: absolute; top: 0; right: 0; display: flex; align-items: center; gap: 12px; }
+.carousel-arrow { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; color: var(--ink); font-size: 16px; cursor: pointer; }
+.carousel-arrow:hover:not(:disabled) { border-color: var(--ink); }
+.carousel-arrow:disabled { opacity: .35; cursor: default; }
+.carousel-arrow:focus-visible, .carousel-thumbs a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.carousel-count { font-size: 13px; color: var(--muted); min-width: 44px; text-align: center; font-variant-numeric: tabular-nums; }
+.carousel-thumbs { list-style: none; margin: 20px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.carousel-thumbs a { display: block; color: var(--muted); font-size: 12px; line-height: 1.4; opacity: .6; transition: opacity .2s; }
+.carousel-thumbs a:hover { opacity: 1; text-decoration: none; }
+.carousel-thumbs a[aria-current="true"] { opacity: 1; color: var(--ink); }
+.carousel-thumbs img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 3px; margin-bottom: 7px; border: 2px solid transparent; }
+.carousel-thumbs a[aria-current="true"] img { border-color: var(--accent); }
+@media (max-width: 600px) {
+  .carousel-thumbs { display: flex; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; gap: 10px; margin-inline: -18px; padding-inline: 18px; scroll-padding-inline: 18px; }
+  .carousel-thumbs::-webkit-scrollbar { display: none; }
+  .carousel-thumbs li { flex: 0 0 34%; scroll-snap-align: start; }
+  .slide h3 { padding-right: 132px; font-size: 16px; }
+  .carousel-bar { gap: 8px; }
+  .carousel-arrow { width: 36px; height: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track { scroll-behavior: auto; }
+}

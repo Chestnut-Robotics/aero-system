@@ -34,17 +34,11 @@
       <p class="affiliation"><a href="https://chestnut.bot/">Chestnut Robotics</a></p>
       <p class="project-summary">Aero UMI + Aero Hand<br><span>Co-designing human demonstration capture and robotic execution.</span></p>
       <div class="actions">
-        <a class="button" href="#contact-demo" data-play="contact-video"><span aria-hidden="true">▶</span> Video</a>
-        <a class="button" href="#system"><span aria-hidden="true">↧</span> System overview</a>
-        <a class="button" href="https://github.com/Chestnut-Robotics/aero-system"><span aria-hidden="true">⌘</span> Website source</a>
+        <a class="button" href="#system"><span aria-hidden="true">↧</span> System Overview</a>
+        <a class="button" href="#demonstrations"><span aria-hidden="true">▶</span> Demo Videos</a>
+        <a class="button" href="https://x.com/Evan_Tao_T/status/2104539693366841583" target="_blank" rel="noopener"><span aria-hidden="true">↗</span> Launch Video</a>
+        <a class="button" href="https://github.com/Chestnut-Robotics/aero-system"><span aria-hidden="true">⌘</span> Website Repository</a>
       </div>
-      <figure class="teaser" id="contact-demo">
-        <video id="contact-video" controls playsinline muted preload="none" poster="assets/media/card-tactile.jpg" aria-label="Card interaction with Aero Hand, Aero UMI and tactile visualization" aria-describedby="contact-caption">
-          <source src="assets/media/card-tactile.mp4" type="video/mp4">
-          <a href="assets/media/card-tactile.mp4">Download the card demonstration.</a>
-        </video>
-        <figcaption id="contact-caption"><strong>Figure 1. Motion and tactile observations during card interaction.</strong> Aero Hand (left) and Aero UMI (right), with tactile signals visualized below. <span class="clip-note">13-second continuous excerpt; normal speed; no audio.</span></figcaption>
-      </figure>
     </section>
 
     <section class="abstract-section" id="abstract" aria-labelledby="abstract-title">
@@ -62,7 +56,7 @@
           <div><img src="assets/media/card-aero-umi.webp" width="1332" height="916" alt="Aero UMI wearable demonstration interface" loading="lazy" decoding="async"><p><strong>(a) Aero UMI</strong><span>Human demonstration interface</span></p></div>
           <div><img src="assets/media/card-aero-hand.webp" width="1332" height="916" alt="Aero Hand five-finger robotic hand on a robot arm" loading="lazy" decoding="async"><p><strong>(b) Aero Hand</strong><span>Dexterous robotic hand</span></p></div>
         </div>
-        <figcaption><strong>Figure 2. The paired embodiment.</strong> Aero UMI captures finger motion and tactile observations during human interaction. Aero Hand provides a five-finger execution platform with 15 active degrees of freedom and tactile sensing.</figcaption>
+        <figcaption><strong>Figure 1. The paired embodiment.</strong> Aero UMI captures finger motion and tactile observations during human interaction. Aero Hand provides a five-finger execution platform with 15 active degrees of freedom and tactile sensing.</figcaption>
       </figure>
       <div class="design-notes">
         <article><h3><span>01</span> Motion correspondence</h3><p>Joint motion is considered on both sides of the system, so demonstration capture is designed around the target hand’s action space.</p></article>
@@ -73,18 +67,53 @@
 
     <section class="wrap paper-section" id="demonstrations" aria-labelledby="demos-title">
       <h2 id="demos-title">Manipulation Demonstrations</h2>
-      <p class="section-intro">Qualitative examples of teleoperation and contact interaction.</p>
-      <div class="demo-grid">
-        <figure class="task-demo">
-          <h3>Cup grasping</h3>
-          <video controls playsinline muted preload="none" poster="assets/media/cup-teleoperation.jpg" aria-label="Cup grasp teleoperation demonstration" aria-describedby="cup-caption"><source src="assets/media/cup-teleoperation.mp4" type="video/mp4"><a href="assets/media/cup-teleoperation.mp4">Download the cup demonstration.</a></video>
-          <figcaption id="cup-caption"><strong>Figure 3. Teleoperation.</strong> Aero UMI guides Aero Hand through a cup grasp, with both devices visible in the same scene. <span class="clip-note">10-second continuous excerpt; normal speed; no audio.</span></figcaption>
-        </figure>
-        <figure class="task-demo">
-          <h3>Thin-object pickup</h3>
-          <video controls playsinline muted preload="none" poster="assets/media/thin-object.jpg" aria-label="Thin-object pickup on the wearable and robot sides, filmed separately" aria-describedby="blade-caption"><source src="assets/media/thin-object.mp4" type="video/mp4"><a href="assets/media/thin-object.mp4">Download the thin-object demonstration.</a></video>
-          <figcaption id="blade-caption"><strong>Figure 4. Fingertip contact.</strong> Picking up a utility blade from a flat surface, shown on the wearable and robot sides. <span class="clip-note">Separate takes, shown side by side; normal speed; no audio.</span></figcaption>
-        </figure>
+      <p class="section-intro">Qualitative examples of touch, teleoperation, contact interaction and grip. Use the arrows or swipe to browse.</p>
+      <div class="demo-carousel" data-carousel>
+        <div class="carousel-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Manipulation demonstrations">
+          <figure class="slide task-demo" id="demo-card-tactile" role="group" aria-roledescription="slide" aria-label="1 of 6: Card interaction with touch">
+            <h3><span class="slide-num">01</span> Card interaction with touch</h3>
+            <video id="contact-video" controls playsinline muted preload="none" poster="assets/media/card-tactile.jpg" aria-label="Card interaction with Aero Hand, Aero UMI and tactile visualization" aria-describedby="cap-card-tactile"><source src="assets/media/card-tactile.mp4" type="video/mp4"><a href="assets/media/card-tactile.mp4">Download this demonstration.</a></video>
+            <figcaption id="cap-card-tactile"><strong>Figure 2. Motion and tactile observations during card interaction.</strong> Aero Hand (left) and Aero UMI (right), with tactile signals visualized below. <span class="clip-note">13-second continuous excerpt; normal speed; no audio.</span></figcaption>
+          </figure>
+          <figure class="slide task-demo" id="demo-cup-squeeze" role="group" aria-roledescription="slide" aria-label="2 of 6: Mirrored cup grasp">
+            <h3><span class="slide-num">02</span> Mirrored cup grasp</h3>
+            <video controls playsinline muted preload="none" poster="assets/media/cup-squeeze.jpg" aria-label="Mirrored cup grasp" aria-describedby="cap-cup-squeeze"><source src="assets/media/cup-squeeze.mp4" type="video/mp4"><a href="assets/media/cup-squeeze.mp4">Download this demonstration.</a></video>
+            <figcaption id="cap-cup-squeeze"><strong>Figure 3. Teleoperation.</strong> The operator wears Aero UMI (right) and Aero Hand (left) follows finger by finger, closing on a paper cup and squeezing it. <span class="clip-note">37-second clip; no audio.</span></figcaption>
+          </figure>
+          <figure class="slide task-demo" id="demo-matched-workspace" role="group" aria-roledescription="slide" aria-label="3 of 6: Matched-workspace teleoperation">
+            <h3><span class="slide-num">03</span> Matched-workspace teleoperation</h3>
+            <video controls playsinline muted preload="none" poster="assets/media/matched-workspace.jpg" aria-label="Matched-workspace teleoperation" aria-describedby="cap-matched-workspace"><source src="assets/media/matched-workspace.mp4" type="video/mp4"><a href="assets/media/matched-workspace.mp4">Download this demonstration.</a></video>
+            <figcaption id="cap-matched-workspace"><strong>Figure 4. Teleoperation.</strong> The operator’s table mirrors the robot’s workspace, so reaching and grasping with Aero UMI map directly onto Aero Hand moving a cup. <span class="clip-note">26-second clip; no audio.</span></figcaption>
+          </figure>
+          <figure class="slide task-demo" id="demo-battery-pick-place" role="group" aria-roledescription="slide" aria-label="4 of 6: Battery pick and place">
+            <h3><span class="slide-num">04</span> Battery pick and place</h3>
+            <video controls playsinline muted preload="none" poster="assets/media/battery-pick-place.jpg" aria-label="Battery pick and place" aria-describedby="cap-battery-pick-place"><source src="assets/media/battery-pick-place.mp4" type="video/mp4"><a href="assets/media/battery-pick-place.mp4">Download this demonstration.</a></video>
+            <figcaption id="cap-battery-pick-place"><strong>Figure 5. Teleoperation.</strong> Aero Hand picks up a 46950 battery cell (46 × 95 mm, 420 g), aligns it and places it upright in a holder. <span class="clip-note">24-second clip; no audio.</span></figcaption>
+          </figure>
+          <figure class="slide task-demo" id="demo-utility-blade" role="group" aria-roledescription="slide" aria-label="5 of 6: Thin-object pickup">
+            <h3><span class="slide-num">05</span> Thin-object pickup</h3>
+            <video controls playsinline muted preload="none" poster="assets/media/utility-blade.jpg" aria-label="Thin-object pickup" aria-describedby="cap-utility-blade"><source src="assets/media/utility-blade.mp4" type="video/mp4"><a href="assets/media/utility-blade.mp4">Download this demonstration.</a></video>
+            <figcaption id="cap-utility-blade"><strong>Figure 6. Fingertip contact.</strong> Picking up a utility blade from a flat surface, shown on the wearable and robot sides. <span class="clip-note">13-second clip; no audio.</span></figcaption>
+          </figure>
+          <figure class="slide task-demo" id="demo-dumbbell-grip" role="group" aria-roledescription="slide" aria-label="6 of 6: 5 kg dumbbell hold">
+            <h3><span class="slide-num">06</span> 5 kg dumbbell hold</h3>
+            <video controls playsinline muted preload="none" poster="assets/media/dumbbell-grip.jpg" aria-label="5 kg dumbbell hold" aria-describedby="cap-dumbbell-grip"><source src="assets/media/dumbbell-grip.mp4" type="video/mp4"><a href="assets/media/dumbbell-grip.mp4">Download this demonstration.</a></video>
+            <figcaption id="cap-dumbbell-grip"><strong>Figure 7. Grip under load.</strong> Aero Hand closes on the handle of a 5 kg dumbbell and keeps its grip while the hand is lifted and turned. <span class="clip-note">89-second clip; no audio.</span></figcaption>
+          </figure>
+        </div>
+        <div class="carousel-bar">
+          <button type="button" class="carousel-arrow" data-dir="-1" aria-label="Previous demonstration">←</button>
+          <span class="carousel-count" aria-live="polite"><span data-current>1</span> / 6</span>
+          <button type="button" class="carousel-arrow" data-dir="1" aria-label="Next demonstration">→</button>
+        </div>
+        <ol class="carousel-thumbs" aria-label="Choose a demonstration">
+          <li><a href="#demo-card-tactile" data-slide="0"><img src="assets/media/card-tactile.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>Card interaction with touch</span></a></li>
+          <li><a href="#demo-cup-squeeze" data-slide="1"><img src="assets/media/cup-squeeze.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>Mirrored cup grasp</span></a></li>
+          <li><a href="#demo-matched-workspace" data-slide="2"><img src="assets/media/matched-workspace.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>Matched-workspace teleoperation</span></a></li>
+          <li><a href="#demo-battery-pick-place" data-slide="3"><img src="assets/media/battery-pick-place.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>Battery pick and place</span></a></li>
+          <li><a href="#demo-utility-blade" data-slide="4"><img src="assets/media/utility-blade.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>Thin-object pickup</span></a></li>
+          <li><a href="#demo-dumbbell-grip" data-slide="5"><img src="assets/media/dumbbell-grip.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"><span>5 kg dumbbell hold</span></a></li>
+        </ol>
       </div>
       <p class="evidence-note">These demonstrations illustrate system interaction; they are not evaluations of an autonomous learned policy.</p>
     </section>
@@ -95,15 +124,18 @@
       <ul class="resource-list">
         <li><a href="https://chestnut.bot/aero-umi.html">Aero UMI</a><span>Demonstration interface</span></li>
         <li><a href="https://chestnut.bot/aero-hand.html">Aero Hand</a><span>Robot hardware</span></li>
-        <li><a href="https://github.com/Chestnut-Robotics/aero-system">Website repository</a><span>Source for this project page</span></li>
-        <li><a href="https://chestnut.bot/contact.html?type=business">Contact</a><span>Research inquiries</span></li>
+        <li><a href="https://github.com/Chestnut-Robotics/aero-system">Website Repository</a><span>Source for this project page</span></li>
+        <li><a href="https://chestnut.bot/contact.html?type=research">Contact</a><span>Research inquiries</span></li>
       </ul>
-      <details class="film-details" id="film">
-        <summary><span>Additional video: Aero System introduction</span><span class="details-label">3 min 39 s <span class="expand-icon" aria-hidden="true">+</span></span></summary>
-        <figure><video controls playsinline preload="none" poster="https://chestnut.bot/assets/aero-launch-poster.jpg" aria-label="Aero System product introduction film"><source src="https://chestnut.bot/assets/aero-launch-720.mp4" type="video/mp4" media="(max-width: 768px)"><source src="https://chestnut.bot/assets/aero-launch-1080.mp4" type="video/mp4"><a href="https://chestnut.bot/aero-system.html">Watch the film on the product page.</a></video><figcaption>This introduction combines interviews, physical footage, and concept visualizations.</figcaption></figure>
-      </details>
     </section>
   </main>
-  <footer class="wrap"><span>Aero · Chestnut Robotics · 2026</span><a href="#main">Back to top ↑</a></footer>
+  <footer class="wrap">
+    <span>Aero · Chestnut Robotics · 2026</span>
+    <div class="footer-end">
+      <a class="social" href="https://x.com/ChestnutRobotic" target="_blank" rel="noopener" aria-label="Chestnut Robotics on X"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a class="social" href="https://www.linkedin.com/company/chestnutbot/" target="_blank" rel="noopener" aria-label="Chestnut Robotics on LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+      <a href="#main">Back to top ↑</a>
+    </div>
+  </footer>
 </body>
 </html>

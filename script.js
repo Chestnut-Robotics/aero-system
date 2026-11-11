@@ -17,9 +17,6 @@ for (const link of document.querySelectorAll('[data-play]')) {
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) videos.forEach(video => video.pause());
 });
-document.querySelector('.film-details').addEventListener('toggle', event => {
-  if (!event.currentTarget.open) event.currentTarget.querySelector('video').pause();
-});
 if ('IntersectionObserver' in window) {
   const playbackObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => { if (!entry.isIntersecting) entry.target.pause(); });

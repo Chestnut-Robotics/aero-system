@@ -140,7 +140,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding-block
 .carousel-arrow:disabled { opacity: .35; cursor: default; }
 .carousel-arrow:focus-visible, .carousel-thumbs a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .carousel-count { font-size: 13px; color: var(--muted); min-width: 44px; text-align: center; font-variant-numeric: tabular-nums; }
-.carousel-thumbs { list-style: none; margin: 20px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.carousel-thumbs { list-style: none; margin: 20px 0 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
 .carousel-thumbs a { display: block; color: var(--muted); font-size: 12px; line-height: 1.4; opacity: .6; transition: opacity .2s; }
 .carousel-thumbs a:hover { opacity: 1; text-decoration: none; }
 .carousel-thumbs a[aria-current="true"] { opacity: 1; color: var(--ink); }

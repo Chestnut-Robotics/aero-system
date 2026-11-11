@@ -64,11 +64,19 @@ for (const carousel of document.querySelectorAll('[data-carousel]')) {
     prev.disabled = current === 0;
     next.disabled = current === slides.length - 1;
     thumbs.forEach((thumb, i) => thumb.setAttribute('aria-current', i === current ? 'true' : 'false'));
-    slides.forEach((slide, i) => { if (i !== current) slide.querySelector('video').pause(); });
     const strip = carousel.querySelector('.carousel-thumbs');
     if (strip.scrollWidth > strip.clientWidth) {
       strip.scrollTo({ left: thumbs[current].parentElement.offsetLeft - strip.offsetLeft - 18, behavior: 'smooth' });
     }
+  };
+  // Pause clips that are off screen, once scrolling has come to rest.
+  let restTimer = null;
+  const pauseHidden = () => {
+    clearTimeout(restTimer);
+    restTimer = setTimeout(() => {
+      const index = Math.round(track.scrollLeft / track.clientWidth);
+      slides.forEach((slide, i) => { if (i !== index) slide.querySelector('video').pause(); });
+    }, 200);
   };
   let settling = null;
   const goTo = index => {
@@ -86,6 +94,7 @@ for (const carousel of document.querySelectorAll('[data-carousel]')) {
   });
   let pending = false;
   track.addEventListener('scroll', () => {
+    pauseHidden();
     if (pending || settling) return;
     pending = true;
     requestAnimationFrame(() => {
